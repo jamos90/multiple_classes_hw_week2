@@ -13,6 +13,8 @@ class Bear
     return @stomach.length()
   end
 
+
+
   def roar(roar)
     return "#{roar}"
   end
@@ -21,8 +23,17 @@ class Bear
     return remove_fish_from_river(fish)
   end
 
-  def food_in_stomach()
-    
+  def add_fish_to_stomach(fish)
+    return @stomach.push(fish)
   end
+
+  def food_in_stomach(river)
+    food_in_belly = 0
+    for fish in river.fish_in_river()
+      food_in_belly +=1
+    end
+    return food_in_belly
+  end
+
 
 end

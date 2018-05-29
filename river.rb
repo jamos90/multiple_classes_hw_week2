@@ -20,4 +20,12 @@ class River
    @fish_in_river.delete(fish)
  end
 
+ def fish_count(river)
+   fish_count = 0
+   for fish in river.fish_in_river()
+     fish_count += 1
+   end
+   return fish_count
+ end
+
 end

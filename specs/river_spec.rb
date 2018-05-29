@@ -30,8 +30,12 @@ class RiverTest < MiniTest::Test
   def test_remove_fish_from_river
     @river.add_fish_to_river(@fish1)
     @river.remove_fish_from_river(@fish1)
-    p @river
     assert_equal(0, @river.check_how_many_fish)
+  end
+
+  def test_fish_count
+    @river.add_fish_to_river(@fish1)
+    assert_equal(1, @river.fish_count(@river))
   end
 
 
